@@ -12,11 +12,13 @@ public class Main {
             result = val1 + val2;
         else if (opCode == 's')
             result = val1 - val2;
-        else if (opCode == 'd')
-            if (val2 != 0.0d)
-                result = val1 / val2;
-            else
-                result = 0.0d;
+        else if (opCode == 'd') {
+            result = val2 != 0.0d ? val1 / val2 : 0.0d;
+//            if (val2 != 0.0d)
+//                result = val1 / val2;
+//            else
+//                result = 0.0d;
+        }
         else if (opCode == 'm')
             result = val1 * val2;
         else {
