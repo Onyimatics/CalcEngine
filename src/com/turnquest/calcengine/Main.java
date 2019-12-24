@@ -27,6 +27,32 @@ public class Main {
         }
         System.out.println(result);
 
+//        While loop
+        int kVal = 5;
+        int factorial = 1;
+
+//        while (kVal > 1) {
+//            factorial *= kVal;
+//            kVal -= 1;
+//        }
+
+        while (kVal > 1)
+            factorial *= kVal--;
+        System.out.println(factorial);
+
+//        Do-While Loop
+        int iVal = 5;
+        do {
+            System.out.print(iVal);
+            System.out.print(" * 2 = ");
+            iVal *= 2;
+            System.out.println(iVal);
+        } while (iVal < 100);
+
+//        For Loop
+        for(int pVal = 1; pVal < 100; pVal *= 2) {
+            System.out.println(pVal);
+        }
 
     }
 }
