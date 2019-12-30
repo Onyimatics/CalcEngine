@@ -3,7 +3,7 @@ package com.turnquest.calcengine;
 public class MathEquation {
     private double leftVal;
     private double rightVal;
-    private char opCode;
+    private char opCode = 'a';
     private double result;
 
     public double getLeftVal() {return leftVal;}
@@ -15,6 +15,18 @@ public class MathEquation {
 
     public double getResult() {return result;}
 
+    public  MathEquation() {};
+
+    public MathEquation(char opCode) {
+        this.opCode = opCode;
+    }
+
+//    Chaining constructor
+    public MathEquation(char opCode, double leftVal, double rightVal) {
+        this(opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
 
     void execute() {
         switch (opCode) {
